@@ -25,9 +25,10 @@ Responsive Design
 
  Deployment
 - Platform: GitHub Pages  
-- Live App: [https://kenzielbanna.github.io/fitcrm/](https://kenzielbanna.github.io/fitcrm/)  
-- Repository: [https://github.com/kenzielbanna/fitcrm](https://github.com/kenzielbanna/fitcrm)
+- Live App: [https://github.com/kenzibanna/fitcrm]
+- Repository: [https://github.com/kenzibanna/fitcrm]
 
- 🧑‍💻 Author
+Name:
 Kenzi El Banna  
 CSCE 4502 – Design of Web-based Systems (Fall 2025)
+
