@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitCRM – Client Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Hello FitCRM</h1>
+  <header>
+    <h1>FitCRM</h1>
+    <nav>
+      <a href="#new-client">New Client</a>
+      <a href="#client-list">Client List</a>
+    </nav>
+  </header>
+
+  <!-- New Client Form -->
+  <section id="new-client" class="card">
+    <h2>Add New Client</h2>
+    <form>
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter full name" required>
+
+      <label>Age</label>
+      <input type="number" placeholder="Age" required>
+
+      <label>Gender</label>
+      <select>
+        <option>Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Email</label>
+      <input type="email" placeholder="example@email.com" required>
+
+      <label>Phone</label>
+      <input type="tel" placeholder="+1 234 567 890" required>
+
+      <label>Fitness Goal</label>
+      <select>
+        <option>Weight Loss</option>
+        <option>Muscle Gain</option>
+        <option>General Fitness</option>
+        <option>Other</option>
+      </select>
+
+      <label>Membership Start Date</label>
+      <input type="date" required>
+
+      <button type="button">Add Client</button>
+    </form>
+    <a href="clients.html">Go to Client List</a>
+  </section>
+
+  <!-- Client List -->
+  <section id="client-list" class="card">
+    <h2>Client List</h2>
+    <input type="text" placeholder="Search by client name..." class="search-box">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Fitness Goal</th>
+          <th>Start Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sarah Johnson</td>
+          <td>sarah@example.com</td>
+          <td>+20 100 234 5678</td>
+          <td>Weight Loss</td>
+          <td>2025-05-10</td>
+          <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <tr>
+          <td>Ahmed Ali</td>
+          <td>ahmed@example.com</td>
+          <td>+20 111 555 9999</td>
+          <td>Muscle Gain</td>
+          <td>2025-06-01</td>
+          <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <!-- Add more sample rows up to 10 -->
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>© 2025 FitCRM | Designed for CSCE 4502 Assignment</p>
+  </footer>
+</body>
+</html>
+
