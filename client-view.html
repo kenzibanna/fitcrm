@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitCRM — Client View</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="view">
+  <header class="topbar">
+    <div class="container">
+      <h1 class="logo">FitCRM</h1>
+      <nav>
+        <a class="nav-link" href="index.html">New Client</a>
+        <a class="nav-link" href="clients.html">Client List</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="client-details-card">
+      <h2 id="cv-name">Client Name</h2>
+      <div class="details-grid">
+        <div><strong>Email</strong><div id="cv-email"></div></div>
+        <div><strong>Phone</strong><div id="cv-phone"></div></div>
+        <div><strong>Fitness Goal</strong><div id="cv-goal"></div></div>
+        <div><strong>Membership Start</strong><div id="cv-start"></div></div>
+      </div>
+
+      <div class="training-section">
+        <h3>Training history</h3>
+        <ul id="cv-history">
+          <li>No training history yet. (Placeholder)</li>
+        </ul>
+      </div>
+
+      <div class="training-section">
+        <h3>Suggested Exercises for Next Session</h3>
+        <div id="exercise-list" class="exercise-list">
+          <p class="muted">Loading exercises...</p>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <a class="btn ghost" href="clients.html">Back to list</a>
+        <a id="edit-from-view" class="btn primary" href="#">Edit Client</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <small>FitCRM • Client view</small>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
