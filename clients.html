@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitCRM – Client List</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitCRM — Clients</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <h1>Client List</h1>
-  <a href="index.html">Back to New Client Form</a>
+<body data-page="clients">
+  <header class="topbar">
+    <div class="container">
+      <h1 class="logo">FitCRM</h1>
+      <nav>
+        <a class="nav-link" href="index.html">New Client</a>
+        <a class="nav-link" href="clients.html">Client List</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="list-header">
+        <h2>Clients</h2>
+        <div class="controls">
+          <input id="search" placeholder="Search by name..." aria-label="Search by name" />
+          <a class="btn primary" href="index.html">+ New Client</a>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="clients-table" class="clients-table" aria-live="polite">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Goal</th>
+              <th>Start Date</th>
+              <th class="actions-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <p class="muted small">Click a client row to view details. Edit & Delete buttons are functional.</p>
+    </section>
+  </main>
+
+  <!-- Edit modal (simple overlay) -->
+  <div id="edit-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="edit-title">
+    <div class="modal-card">
+      <header>
+        <h3 id="edit-title">Edit Client</h3>
+        <button id="close-edit" class="btn small">Close</button>
+      </header>
+      <form id="edit-form" novalidate>
+        <div class="form-grid">
+          <label>
+            <span>Full name *</span>
+            <input id="edit-fullName" name="fullName" type="text" required />
+            <small class="error" data-for="edit-fullName"></small>
+          </label>
+          <label>
+            <span>Email *</span>
+            <input id="edit-email" name="email" type="email" required />
+            <small class="error" data-for="edit-email"></small>
+          </label>
+          <label>
+            <span>Phone *</span>
+            <input id="edit-phone" name="phone" type="tel" required />
+            <small class="error" data-for="edit-phone"></small>
+          </label>
+          <label>
+            <span>Fitness Goal *</span>
+            <input id="edit-goal" name="goal" type="text" required />
+            <small class="error" data-for="edit-goal"></small>
+          </label>
+          <label>
+            <span>Start Date *</span>
+            <input id="edit-startDate" name="startDate" type="date" required />
+            <small class="error" data-for="edit-startDate"></small>
+          </label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <small>FitCRM • Frontend prototype</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
