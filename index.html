@@ -1,102 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitCRM – Client Manager</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitCRM — Add Client</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <h1>Hello FitCRM</h1>
-  <header>
-    <h1>FitCRM</h1>
-    <nav>
-      <a href="#new-client">New Client</a>
-      <a href="#client-list">Client List</a>
-    </nav>
+<body data-page="index">
+  <header class="topbar">
+    <div class="container">
+      <h1 class="logo">FitCRM</h1>
+      <nav>
+        <a class="nav-link" href="index.html">New Client</a>
+        <a class="nav-link" href="clients.html">Client List</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- New Client Form -->
-  <section id="new-client" class="card">
-    <h2>Add New Client</h2>
-    <form>
-      <label>Full Name</label>
-      <input type="text" placeholder="Enter full name" required>
+  <main class="container">
+    <section class="card">
+      <h2>New Client</h2>
+      <form id="client-form" novalidate>
+        <div class="form-grid">
+          <label>
+            <span>Full name *</span>
+            <input id="fullName" name="fullName" type="text" required />
+            <small class="error" data-for="fullName"></small>
+          </label>
 
-      <label>Age</label>
-      <input type="number" placeholder="Age" required>
+          <label>
+            <span>Age</span>
+            <input id="age" name="age" type="number" min="12" max="120" />
+            <small class="error" data-for="age"></small>
+          </label>
 
-      <label>Gender</label>
-      <select>
-        <option>Select Gender</option>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-      </select>
+          <label>
+            <span>Gender</span>
+            <select id="gender" name="gender">
+              <option value="">Select</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Other</option>
+            </select>
+          </label>
 
-      <label>Email</label>
-      <input type="email" placeholder="example@email.com" required>
+          <label>
+            <span>Email *</span>
+            <input id="email" name="email" type="email" required />
+            <small class="error" data-for="email"></small>
+          </label>
 
-      <label>Phone</label>
-      <input type="tel" placeholder="+1 234 567 890" required>
+          <label>
+            <span>Phone *</span>
+            <input id="phone" name="phone" type="tel" required />
+            <small class="error" data-for="phone"></small>
+          </label>
 
-      <label>Fitness Goal</label>
-      <select>
-        <option>Weight Loss</option>
-        <option>Muscle Gain</option>
-        <option>General Fitness</option>
-        <option>Other</option>
-      </select>
+          <label>
+            <span>Fitness Goal *</span>
+            <input id="goal" name="goal" type="text" placeholder="Weight Loss / Muscle Gain / General Fitness" required/>
+            <small class="error" data-for="goal"></small>
+          </label>
 
-      <label>Membership Start Date</label>
-      <input type="date" required>
+          <label>
+            <span>Membership Start Date *</span>
+            <input id="startDate" name="startDate" type="date" required />
+            <small class="error" data-for="startDate"></small>
+          </label>
+        </div>
 
-      <button type="button">Add Client</button>
-    </form>
-    <a href="clients.html">Go to Client List</a>
-  </section>
+        <div class="form-actions">
+          <button id="add-client" class="btn primary" type="submit">Add Client</button>
+          <a class="btn ghost" href="clients.html">Go to Client List</a>
+        </div>
+        <p class="muted">Fields with * are required. Data is stored locally in your browser.</p>
+      </form>
+    </section>
+  </main>
 
-  <!-- Client List -->
-  <section id="client-list" class="card">
-    <h2>Client List</h2>
-    <input type="text" placeholder="Search by client name..." class="search-box">
-
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Fitness Goal</th>
-          <th>Start Date</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Sarah Johnson</td>
-          <td>sarah@example.com</td>
-          <td>+20 100 234 5678</td>
-          <td>Weight Loss</td>
-          <td>2025-05-10</td>
-          <td><button>Edit</button> <button>Delete</button></td>
-        </tr>
-        <tr>
-          <td>Ahmed Ali</td>
-          <td>ahmed@example.com</td>
-          <td>+20 111 555 9999</td>
-          <td>Muscle Gain</td>
-          <td>2025-06-01</td>
-          <td><button>Edit</button> <button>Delete</button></td>
-        </tr>
-        <!-- Add more sample rows up to 10 -->
-      </tbody>
-    </table>
-  </section>
-
-  <footer>
-    <p>© 2025 FitCRM | Designed for CSCE 4502 Assignment</p>
+  <footer class="footer">
+    <div class="container">
+      <small>FitCRM • Frontend prototype • HTML / CSS / JS</small>
+    </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
-
