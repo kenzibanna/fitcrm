@@ -1,0 +1,90 @@
+/* styles.css — FitCRM stylish theme */
+
+/* Variables */
+:root{
+  --bg:#f4f7fb;
+  --card:#fff;
+  --accent:#0b72ff;
+  --accent-2:#6c5ce7;
+  --muted:#6b7280;
+  --danger:#ef4444;
+  --radius:12px;
+  --container-w:1100px;
+  --gap:1rem;
+  --shadow: 0 10px 30px rgba(12, 40, 80, 0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:#0f172a; -webkit-font-smoothing:antialiased;
+}
+
+/* Layout */
+.container{max-width:var(--container-w);margin:0 auto;padding:1.25rem}
+
+/* Topbar */
+.topbar{background:linear-gradient(90deg,#fff,#f6fbff);border-bottom:1px solid rgba(11,39,83,0.06)}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem}
+.logo{margin:0;font-weight:800;color:var(--accent);font-size:1.25rem}
+nav{display:flex;gap:0.5rem}
+.nav-link{padding:0.45rem 0.8rem;border-radius:9px;text-decoration:none;color:var(--muted);font-weight:600}
+.nav-link:hover{background:rgba(11,114,255,0.06);color:var(--accent)}
+
+/* Card */
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.25rem;margin:1.25rem 0}
+h2{margin:0 0 0.75rem 0;color:#0b2547}
+
+/* Form grid */
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+label{display:flex;flex-direction:column;font-weight:600;color:var(--muted);font-size:0.95rem}
+input,select,textarea{padding:0.6rem;border-radius:9px;border:1px solid #e6eefc;background:#fbfdff}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 6px 20px rgba(11,39,83,0.06);border-color:var(--accent)}
+.error{color:var(--danger);font-size:0.8rem;height:1rem;margin-top:0.25rem}
+
+/* Buttons */
+.btn{display:inline-block;padding:0.6rem 0.9rem;border-radius:9px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-weight:700}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 8px 24px rgba(12,40,80,0.08)}
+.btn.ghost{background:transparent;border:1px solid rgba(11,39,83,0.06);color:var(--muted)}
+.btn.small{padding:0.35rem 0.5rem;font-size:0.85rem}
+
+/* Form actions & small text */
+.form-actions{margin-top:1rem;display:flex;gap:0.75rem;align-items:center}
+.muted{color:var(--muted)}
+.small{font-size:0.9rem}
+
+/* Table */
+.table-wrap{overflow:auto;margin-top:0.5rem}
+.clients-table{width:100%;border-collapse:collapse;min-width:800px}
+.clients-table th, .clients-table td{padding:0.85rem 0.6rem;border-bottom:1px solid #f1f6ff;text-align:left}
+.clients-table thead th{background:linear-gradient(90deg,#eef6ff,#fff);color:var(--muted);font-weight:700}
+.clients-table tbody tr:hover{background:#fbfdff;transform:translateY(0.0px)}
+
+/* List header */
+.list-header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.controls{display:flex;gap:0.5rem;align-items:center}
+.controls input{padding:0.6rem;border-radius:9px;border:1px solid #e6eefc;min-width:220px}
+
+/* Details grid */
+.details-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:0.75rem 0}
+.training-section{margin-top:1rem}
+.exercise-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;margin-top:0.75rem}
+.exercise-card{background:#fff;border-radius:10px;padding:0.8rem;border:1px solid #f1f6ff;box-shadow:0 6px 18px rgba(11,39,83,0.03)}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(4,9,22,0.45);display:flex;align-items:center;justify-content:center;padding:1rem;z-index:60}
+.modal.hidden{display:none}
+.modal-card{background:var(--card);padding:1rem;border-radius:12px;max-width:760px;width:100%;box-shadow:var(--shadow)}
+.modal-card header{display:flex;align-items:center;justify-content:space-between}
+
+/* Responsive */
+@media (max-width:900px){
+  .form-grid{grid-template-columns:1fr}
+  .clients-table{min-width:700px}
+  .details-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .controls input{min-width:120px}
+  .clients-table{min-width:480px}
+  .logo{font-size:1rem}
+}
