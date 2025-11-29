@@ -6,6 +6,7 @@
   <title>FitCRM — Clients</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+<<<<<<< HEAD
 <body data-page="clients" class="theme-fitness">
   <header class="topbar">
     <div class="container topbar-inner">
@@ -16,6 +17,15 @@
       <nav class="topnav">
         <a href="index.html" class="nav">New Client</a>
         <a href="clients.html" class="nav active">Clients</a>
+=======
+<body data-page="clients">
+  <header class="topbar">
+    <div class="container">
+      <h1 class="logo">FitCRM</h1>
+      <nav>
+        <a class="nav-link" href="index.html">New Client</a>
+        <a class="nav-link" href="clients.html">Client List</a>
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
       </nav>
     </div>
   </header>
@@ -23,25 +33,35 @@
   <main class="container">
     <section class="card">
       <div class="list-header">
+<<<<<<< HEAD
         <div>
           <h2>Clients</h2>
           <p class="muted">Manage your clients — click a row to view details.</p>
         </div>
 
+=======
+        <h2>Clients</h2>
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
         <div class="controls">
           <input id="search" placeholder="Search by name..." aria-label="Search by name" />
           <a class="btn primary" href="index.html">+ New Client</a>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div class="table-wrap card-table">
         <table id="clients-table" class="clients-table" role="table" aria-live="polite">
+=======
+      <div class="table-wrap">
+        <table id="clients-table" class="clients-table" aria-live="polite">
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
           <thead>
             <tr>
               <th>Name</th>
               <th>Email</th>
               <th>Phone</th>
               <th>Goal</th>
+<<<<<<< HEAD
               <th>Start</th>
               <th class="actions-col">Actions</th>
             </tr>
@@ -68,31 +88,77 @@
           <label>
             <span>Full Name *</span>
             <input id="edit-fullName" type="text" required />
+=======
+              <th>Start Date</th>
+              <th class="actions-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <p class="muted small">Click a client row to view details. Edit & Delete buttons are functional.</p>
+    </section>
+  </main>
+
+  <!-- Edit modal (simple overlay) -->
+  <div id="edit-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="edit-title">
+    <div class="modal-card">
+      <header>
+        <h3 id="edit-title">Edit Client</h3>
+        <button id="close-edit" class="btn small">Close</button>
+      </header>
+      <form id="edit-form" novalidate>
+        <div class="form-grid">
+          <label>
+            <span>Full name *</span>
+            <input id="edit-fullName" name="fullName" type="text" required />
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
             <small class="error" data-for="edit-fullName"></small>
           </label>
           <label>
             <span>Email *</span>
+<<<<<<< HEAD
             <input id="edit-email" type="email" required />
+=======
+            <input id="edit-email" name="email" type="email" required />
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
             <small class="error" data-for="edit-email"></small>
           </label>
           <label>
             <span>Phone *</span>
+<<<<<<< HEAD
             <input id="edit-phone" type="tel" required />
+=======
+            <input id="edit-phone" name="phone" type="tel" required />
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
             <small class="error" data-for="edit-phone"></small>
           </label>
           <label>
             <span>Fitness Goal *</span>
+<<<<<<< HEAD
             <input id="edit-goal" type="text" required />
+=======
+            <input id="edit-goal" name="goal" type="text" required />
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
             <small class="error" data-for="edit-goal"></small>
           </label>
           <label>
             <span>Start Date *</span>
+<<<<<<< HEAD
             <input id="edit-startDate" type="date" required />
+=======
+            <input id="edit-startDate" name="startDate" type="date" required />
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
             <small class="error" data-for="edit-startDate"></small>
           </label>
         </div>
         <div class="form-actions">
+<<<<<<< HEAD
           <button type="submit" class="btn primary">Save</button>
+=======
+          <button type="submit" class="btn primary">Save Changes</button>
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
         </div>
       </form>
     </div>
@@ -100,7 +166,11 @@
 
   <footer class="footer">
     <div class="container">
+<<<<<<< HEAD
       <small>FitCRM • Manage clients locally</small>
+=======
+      <small>FitCRM • Frontend prototype</small>
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
     </div>
   </footer>
 

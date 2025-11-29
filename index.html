@@ -6,6 +6,7 @@
   <title>FitCRM — Add Client</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+<<<<<<< HEAD
 <body data-page="index" class="theme-fitness">
   <header class="topbar">
     <div class="container topbar-inner">
@@ -16,11 +17,21 @@
       <nav class="topnav">
         <a href="index.html" class="nav active">New Client</a>
         <a href="clients.html" class="nav">Clients</a>
+=======
+<body data-page="index">
+  <header class="topbar">
+    <div class="container">
+      <h1 class="logo">FitCRM</h1>
+      <nav>
+        <a class="nav-link" href="index.html">New Client</a>
+        <a class="nav-link" href="clients.html">Client List</a>
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
       </nav>
     </div>
   </header>
 
   <main class="container">
+<<<<<<< HEAD
     <section class="hero card-hero">
       <div>
         <h2>New Client</h2>
@@ -35,19 +46,36 @@
           <label>
             <span>Full Name *</span>
             <input id="fullName" name="fullName" type="text" placeholder="e.g., Sara Ahmed" required />
+=======
+    <section class="card">
+      <h2>New Client</h2>
+      <form id="client-form" novalidate>
+        <div class="form-grid">
+          <label>
+            <span>Full name *</span>
+            <input id="fullName" name="fullName" type="text" required />
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
             <small class="error" data-for="fullName"></small>
           </label>
 
           <label>
             <span>Age</span>
+<<<<<<< HEAD
             <input id="age" name="age" type="number" min="12" max="120" placeholder="Optional" />
+=======
+            <input id="age" name="age" type="number" min="12" max="120" />
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
             <small class="error" data-for="age"></small>
           </label>
 
           <label>
             <span>Gender</span>
             <select id="gender" name="gender">
+<<<<<<< HEAD
               <option value="">— Select —</option>
+=======
+              <option value="">Select</option>
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
               <option>Female</option>
               <option>Male</option>
               <option>Other</option>
@@ -56,12 +84,17 @@
 
           <label>
             <span>Email *</span>
+<<<<<<< HEAD
             <input id="email" name="email" type="email" placeholder="name@example.com" required />
+=======
+            <input id="email" name="email" type="email" required />
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
             <small class="error" data-for="email"></small>
           </label>
 
           <label>
             <span>Phone *</span>
+<<<<<<< HEAD
             <input id="phone" name="phone" type="tel" placeholder="+20 1..." required />
             <small class="error" data-for="phone"></small>
           </label>
@@ -69,6 +102,15 @@
           <label class="full">
             <span>Fitness Goal *</span>
             <input id="goal" name="goal" type="text" placeholder="Weight Loss / Muscle Gain / General Fitness" required />
+=======
+            <input id="phone" name="phone" type="tel" required />
+            <small class="error" data-for="phone"></small>
+          </label>
+
+          <label>
+            <span>Fitness Goal *</span>
+            <input id="goal" name="goal" type="text" placeholder="Weight Loss / Muscle Gain / General Fitness" required/>
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
             <small class="error" data-for="goal"></small>
           </label>
 
@@ -81,17 +123,27 @@
 
         <div class="form-actions">
           <button id="add-client" class="btn primary" type="submit">Add Client</button>
+<<<<<<< HEAD
           <a href="clients.html" class="btn ghost">View Client List</a>
         </div>
 
         <p class="muted tiny">Fields marked * are required. This app stores data in your browser only.</p>
+=======
+          <a class="btn ghost" href="clients.html">Go to Client List</a>
+        </div>
+        <p class="muted">Fields with * are required. Data is stored locally in your browser.</p>
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
       </form>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
+<<<<<<< HEAD
       <small>FitCRM • Frontend Prototype • HTML / CSS / JS</small>
+=======
+      <small>FitCRM • Frontend prototype • HTML / CSS / JS</small>
+>>>>>>> 9b157af550300f9658b80e57e9f5b32e4890f379
     </div>
   </footer>
 
