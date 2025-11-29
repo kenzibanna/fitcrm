@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitCRM — Add Client</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="index" class="theme-fitness">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <span class="logo-mark">🏋️‍♀️</span>
+        <h1>FitCRM</h1>
+      </div>
+      <nav class="topnav">
+        <a href="index.html" class="nav active">New Client</a>
+        <a href="clients.html" class="nav">Clients</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card-hero">
+      <div>
+        <h2>New Client</h2>
+        <p class="muted">Quickly add a client. Data is stored locally (browser localStorage).</p>
+      </div>
+      <div class="hero-illustration">💪</div>
+    </section>
+
+    <section class="card">
+      <form id="client-form" novalidate>
+        <div class="form-grid">
+          <label>
+            <span>Full Name *</span>
+            <input id="fullName" name="fullName" type="text" placeholder="e.g., Sara Ahmed" required />
+            <small class="error" data-for="fullName"></small>
+          </label>
+
+          <label>
+            <span>Age</span>
+            <input id="age" name="age" type="number" min="12" max="120" placeholder="Optional" />
+            <small class="error" data-for="age"></small>
+          </label>
+
+          <label>
+            <span>Gender</span>
+            <select id="gender" name="gender">
+              <option value="">— Select —</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Email *</span>
+            <input id="email" name="email" type="email" placeholder="name@example.com" required />
+            <small class="error" data-for="email"></small>
+          </label>
+
+          <label>
+            <span>Phone *</span>
+            <input id="phone" name="phone" type="tel" placeholder="+20 1..." required />
+            <small class="error" data-for="phone"></small>
+          </label>
+
+          <label class="full">
+            <span>Fitness Goal *</span>
+            <input id="goal" name="goal" type="text" placeholder="Weight Loss / Muscle Gain / General Fitness" required />
+            <small class="error" data-for="goal"></small>
+          </label>
+
+          <label>
+            <span>Membership Start Date *</span>
+            <input id="startDate" name="startDate" type="date" required />
+            <small class="error" data-for="startDate"></small>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button id="add-client" class="btn primary" type="submit">Add Client</button>
+          <a href="clients.html" class="btn ghost">View Client List</a>
+        </div>
+
+        <p class="muted tiny">Fields marked * are required. This app stores data in your browser only.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>FitCRM • Frontend Prototype • HTML / CSS / JS</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

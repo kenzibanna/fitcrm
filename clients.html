@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitCRM — Clients</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="clients" class="theme-fitness">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <span class="logo-mark">🏋️‍♀️</span>
+        <h1>FitCRM</h1>
+      </div>
+      <nav class="topnav">
+        <a href="index.html" class="nav">New Client</a>
+        <a href="clients.html" class="nav active">Clients</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="list-header">
+        <div>
+          <h2>Clients</h2>
+          <p class="muted">Manage your clients — click a row to view details.</p>
+        </div>
+
+        <div class="controls">
+          <input id="search" placeholder="Search by name..." aria-label="Search by name" />
+          <a class="btn primary" href="index.html">+ New Client</a>
+        </div>
+      </div>
+
+      <div class="table-wrap card-table">
+        <table id="clients-table" class="clients-table" role="table" aria-live="polite">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Goal</th>
+              <th>Start</th>
+              <th class="actions-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- filled by JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <p class="muted small">Edit opens a modal. Delete asks for confirmation.</p>
+    </section>
+  </main>
+
+  <!-- Edit modal -->
+  <div id="edit-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <header class="modal-head">
+        <h3>Edit Client</h3>
+        <button id="close-edit" class="btn small ghost">Close</button>
+      </header>
+      <form id="edit-form" class="modal-form" novalidate>
+        <div class="form-grid">
+          <label>
+            <span>Full Name *</span>
+            <input id="edit-fullName" type="text" required />
+            <small class="error" data-for="edit-fullName"></small>
+          </label>
+          <label>
+            <span>Email *</span>
+            <input id="edit-email" type="email" required />
+            <small class="error" data-for="edit-email"></small>
+          </label>
+          <label>
+            <span>Phone *</span>
+            <input id="edit-phone" type="tel" required />
+            <small class="error" data-for="edit-phone"></small>
+          </label>
+          <label>
+            <span>Fitness Goal *</span>
+            <input id="edit-goal" type="text" required />
+            <small class="error" data-for="edit-goal"></small>
+          </label>
+          <label>
+            <span>Start Date *</span>
+            <input id="edit-startDate" type="date" required />
+            <small class="error" data-for="edit-startDate"></small>
+          </label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <small>FitCRM • Manage clients locally</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* styles.css — Fitness-themed FitCRM */
+
+/* Variables */
+:root{
+  --bg: #0f1724;            /* deep background for header areas */
+  --page-bg: #fbfcfe;       /* page background */
+  --card: #ffffff;
+  --teal: #06b6d4;          /* energetic teal */
+  --orange: #ff6b35;        /* warm accent */
+  --muted: #6b7280;
+  --text: #0b1220;
+  --radius: 12px;
+  --container-w:1100px;
+  --shadow: 0 12px 30px rgba(12,20,40,0.06);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--page-bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Layout */
+.container{max-width:var(--container-w);margin:0 auto;padding:1rem}
+
+/* Topbar */
+.topbar{background:linear-gradient(90deg,#071428 0%, #082033 60%);color:#fff;padding:0.6rem 0;box-shadow:0 6px 20px rgba(2,6,23,0.25)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 0.5rem}
+.brand{display:flex;align-items:center;gap:0.6rem}
+.logo-mark{font-size:1.5rem}
+.brand h1{margin:0;font-size:1.15rem;letter-spacing:0.4px}
+.topnav{display:flex;gap:0.5rem}
+.nav{padding:0.45rem 0.85rem;border-radius:999px;background:transparent;color:rgba(255,255,255,0.85);text-decoration:none;font-weight:700}
+.nav.active{background:rgba(255,255,255,0.06);color:#fff;box-shadow:inset 0 -2px 0 rgba(0,0,0,0.08)}
+.nav:hover{background:rgba(255,255,255,0.04)}
+
+/* Hero */
+.card-hero{display:flex;justify-content:space-between;align-items:center;padding:1.1rem;margin:1.25rem 0;border-radius:14px;background:linear-gradient(90deg,#e8fdfd, #fff);box-shadow:var(--shadow)}
+.hero-illustration{font-size:2.4rem}
+
+/* Card */
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.1rem;margin:1rem 0}
+h2{margin:0 0 0.5rem 0}
+
+/* Form grid */
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+label{display:flex;flex-direction:column;font-weight:700;color:var(--muted);font-size:0.95rem}
+label.full{grid-column:1/-1}
+input,select,textarea{padding:0.65rem;border-radius:10px;border:1px solid #e8eef7;background:#fbfdff}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 10px 30px rgba(6,182,212,0.08);border-color:var(--teal)}
+.error{color:var(--orange);font-size:0.82rem;height:1rem;margin-top:0.25rem}
+
+/* Buttons */
+.btn{display:inline-block;padding:0.6rem 0.9rem;border-radius:10px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-weight:800}
+.btn.primary{background:linear-gradient(90deg,var(--teal),#06a7d1);color:#fff;box-shadow:0 8px 30px rgba(6,182,212,0.12)}
+.btn.ghost{background:transparent;border:1px solid rgba(11,20,30,0.06);color:var(--text)}
+.btn.small{padding:0.35rem 0.5rem;font-size:0.9rem}
+
+/* Actions & helper */
+.form-actions{margin-top:0.9rem;display:flex;gap:0.6rem;align-items:center}
+.muted{color:var(--muted)}
+.tiny{font-size:0.85rem}
+.small{font-size:0.9rem}
+
+/* Table */
+.table-wrap{overflow:auto;margin-top:0.5rem}
+.card-table{padding:0}
+.clients-table{width:100%;border-collapse:collapse;min-width:760px}
+.clients-table th, .clients-table td{padding:0.8rem 0.6rem;border-bottom:1px solid #f3f6fb;text-align:left}
+.clients-table thead th{background:linear-gradient(90deg,#f8fcff,#fff);color:var(--muted);font-weight:800}
+.clients-table tbody tr:hover{background:#fbfdff;transform:translateY(0.0px)}
+.actions-col{width:200px}
+
+/* List Header */
+.list-header{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.controls{display:flex;gap:0.5rem;align-items:center}
+.controls input{padding:0.6rem;border-radius:10px;border:1px solid #e6eefc;min-width:220px}
+
+/* Details & view */
+.view-header{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.view-actions{display:flex;gap:0.6rem}
+.details-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:0.75rem 0}
+.detail{background:linear-gradient(90deg,#fff,#fbfdff);padding:0.8rem;border-radius:10px;border:1px solid #f2f8fb}
+
+/* Exercises */
+.exercise-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.75rem;margin-top:0.75rem}
+.exercise-card{background:#fff;border-radius:10px;padding:0.9rem;border:1px solid #f1f6ff;box-shadow:0 8px 20px rgba(6,20,35,0.04)}
+.exercise-card strong{display:block;margin-bottom:0.45rem}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(3,6,15,0.55);display:flex;align-items:center;justify-content:center;padding:1rem;z-index:60}
+.modal.hidden{display:none}
+.modal-card{background:var(--card);padding:1rem;border-radius:12px;max-width:760px;width:100%;box-shadow:var(--shadow)}
+.modal-head{display:flex;align-items:center;justify-content:space-between}
+
+/* Footer */
+.footer{padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .form-grid{grid-template-columns:1fr}
+  .clients-table{min-width:640px}
+  .details-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .controls input{min-width:120px}
+  .clients-table{min-width:480px}
+  .logo-mark{font-size:1.1rem}
+}

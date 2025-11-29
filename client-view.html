@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitCRM — Client View</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="view" class="theme-fitness">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <span class="logo-mark">🏋️‍♀️</span>
+        <h1>FitCRM</h1>
+      </div>
+      <nav class="topnav">
+        <a href="index.html" class="nav">New Client</a>
+        <a href="clients.html" class="nav">Clients</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="client-details-card">
+      <div class="view-header">
+        <div>
+          <h2 id="cv-name">Client Name</h2>
+          <p id="cv-brief" class="muted">Client details & suggested exercises</p>
+        </div>
+        <div class="view-actions">
+          <a id="cv-edit" class="btn primary" href="#">Edit</a>
+          <a class="btn ghost" href="clients.html">Back to list</a>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail"><strong>Email</strong><div id="cv-email" class="muted"></div></div>
+        <div class="detail"><strong>Phone</strong><div id="cv-phone" class="muted"></div></div>
+        <div class="detail"><strong>Fitness Goal</strong><div id="cv-goal" class="muted"></div></div>
+        <div class="detail"><strong>Membership Start</strong><div id="cv-start" class="muted"></div></div>
+      </div>
+
+      <div class="training-section">
+        <h3>Training history</h3>
+        <ul id="cv-history" class="muted">
+          <li>No history yet.</li>
+        </ul>
+      </div>
+
+      <div class="training-section">
+        <h3>Suggested exercises for next session</h3>
+        <div id="exercise-list" class="exercise-list">
+          <p class="muted">Loading suggested exercises...</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>FitCRM • Suggestions powered by Wger (when available)</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
